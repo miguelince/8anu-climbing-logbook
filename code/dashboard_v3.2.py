@@ -91,9 +91,9 @@ text_visualzation =html.Div([html.P('The visualization shown on the right is dev
                              html.P('In this part you can select the crag you want to see by hovering through'
                                     ' the points shown in the map.'),
                              html.H6('Grades'),
-                             html.P('In this part you can see how many routes of a specific grade there are.'),
+                             html.P('In this part you can see the number of ascents by ascent method.'),
                              html.H6('Season'),
-                             html.P('Using this graphic you can see the number of utilizations in each month.'),
+                             html.P('Using this graphic you can see the number of ascents in each of the months.'),
                              html.H6('Table'),
                              html.P('This part shows the differents routes a specific crag has, their dificulty and the '
                                     'grade given by past users.'
