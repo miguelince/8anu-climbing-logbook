@@ -9,13 +9,13 @@ import datetime as dt
 import dash_bootstrap_components as dbc
 
 # change dir
-#os.chdir('C:\\Users\\u86004\Documents\\Documentos Miguel\\Mestrado\\Ano 1\\S2\\Data Viz\\Projects\\Dashboard\\8anu-climbing-logbook')
+os.chdir('C:\\Users\\u86004\\Documents\\Documentos Miguel\Mestrado\\Ano 1\\S2\\Data Viz\\Projects\\Dashboard\\8anu-climbing-logbook')
 
 # dataframes
 # dataframe with the information of each crag
-df_climb = pd.read_csv('..\data\sports_climb.csv')
+df_climb = pd.read_csv('data\sports_climb.csv')
 # coordenates of each crag
-df_locations = pd.read_csv('..\data\crags_coord.csv')
+df_locations = pd.read_csv('data\crags_coord.csv')
 
 # fixing datatypes
 df_locations['lat'] = df_locations['lat'].astype('float')
@@ -71,9 +71,13 @@ text_intro =html.Div([html.P(['Welcome! This dashboard was created for the cours
                       html.P(['The authors: Tomás Jordão and Miguel Lince'], style={'text-align': 'justify'})])
 
 text_concepts = html.Div([html.H6('Crag'),
-                          html.P('A crag is ....'),
+                          html.P('A crag is a climbing cliff belonging to a climbing area. Is usually composed by sectors.'),
+                          html.H6('Sector'),
+                          html.P('A specific part of the cliff, composed by routes.'),
+                          html.H6('Route'),
+                          html.P('A specific defned path on the rock.'),
                           html.H6('Method'),
-
+                          html.P('Method which the climber ascented the route. Redpoint: ascent with more than 1 try; Flash: Ascent with one try but with previous knowlegde of the route; Onsigth: As flash but with no previous knowledge. Top-rope: climber climbs with the rope passing on the anchor of the route')
                           ])
 
 text_visualzation =html.Div([html.P('The visualization shown on the right is devided into eight parts:'),
@@ -160,7 +164,7 @@ app.layout = html.Div(style={'backgroundColor': 'white'},
                                                           html.Br(),
                                                           authors, #constructed above
                                                           html.H6('Developed using:'),
-                                                          dbc.CardImg(src='/assets/plotly_logo_v2.png')],
+                                                          dbc.CardImg(src='assets/plotly_logo.png')], 
                                                id="Information-Display",
                                                title="Some Helpful Information",
                                                is_open=False,
