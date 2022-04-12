@@ -106,16 +106,16 @@ text_visualzation =html.Div([html.P('The visualization shown on the right is div
                                     style={'text-align': 'justify'}),
                              html.H6('Table'),
                              html.P('This part shows the differents routes a specific crag has, their dificulty and the '
-                                    'grade given by past users.'
-                                    'You can select as well a specific route and change the two graphs placed on the'
-                                    'right side of the table.',
+                                    'grade given by previous ascensionists.'
+                                    'You can select a route and filter the two graphs placed on the'
+                                    'right side of the table. The Rate of the route its given by the user in a scale of 1 to 5.',
                                     style={'text-align': 'justify'}),
                              html.H6('Method'),
-                             html.P('In this graphic you can see how many utilizations of a specific method exist '
+                             html.P('In this graphic you can see how many ascents of a specific method exists '
                                     'for all the routes or for a specific one by selecting the route in the table.',
                                     style={'text-align': 'justify'}),
-                             html.H6('Sex Distribution'),
-                             html.P('In this part you can see the percentage of man and women that used a specific route.',
+                             html.H6('Gender Distribution'),
+                             html.P('In this part you can see the proportion of males and female ascents.',
                                     style={'text-align': 'justify'}),
                             ])
 
