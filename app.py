@@ -6,6 +6,7 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 import datetime as dt
 import dash_bootstrap_components as dbc
+import base64
 
 # dataframes
 # dataframe with the information of each crag
@@ -155,6 +156,9 @@ links = html.Div([html.H6('Data'),
 # saving the last year selected
 list_year = [2017] #next year selected
 
+image_filename = 'plotly_logo_v2.png'
+encoded_image = base64.b64encode(open(image_filename, 'rb').read())
+
 # app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
@@ -184,7 +188,7 @@ app.layout = html.Div(style={'backgroundColor': 'white'},
                                                           html.Br(),
                                                           authors, #constructed above
                                                           html.H6('Developed using'),
-                                                          dbc.CardImg(src='plotly_logo_v2.png')],
+                                                          html.Img(src='data:image/png;base64,{}'.format(encoded_image))],
                                                id="Information-Display",
                                                title="Some Helpful Information",
                                                is_open=False,
