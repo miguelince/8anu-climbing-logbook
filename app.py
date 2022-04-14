@@ -156,8 +156,8 @@ links = html.Div([html.H6('Data'),
 # saving the last year selected
 list_year = [2017] #next year selected
 
-image_filename = 'plotly_logo_v2.png'
-encoded_image = base64.b64encode(open(image_filename, 'rb').read())
+# image_filename = 'plotly_logo_v2.png'
+# encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 # app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -187,8 +187,7 @@ app.layout = html.Div(style={'backgroundColor': 'white'},
                                                           links, #constructed above
                                                           html.Br(),
                                                           authors, #constructed above
-                                                          html.H6('Developed using'),
-                                                          html.Img(src='data:image/png;base64,{}'.format(encoded_image))],
+                                                          html.H6('Developed using Dash with Plotly')]
                                                id="Information-Display",
                                                title="Some Helpful Information",
                                                is_open=False,
