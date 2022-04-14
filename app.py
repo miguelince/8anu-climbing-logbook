@@ -187,7 +187,8 @@ app.layout = html.Div(style={'backgroundColor': 'white'},
                                                           links, #constructed above
                                                           html.Br(),
                                                           authors, #constructed above
-                                                          html.H6('Developed using Dash with Plotly')]
+                                                          html.H6('Developed using Dash with Plotly'),
+                                                          html.Img(src='assets/plotly_logo_v2.png', style={'width': '50%'})],
                                                id="Information-Display",
                                                title="Some Helpful Information",
                                                is_open=False,
